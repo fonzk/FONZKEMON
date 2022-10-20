@@ -13,6 +13,9 @@ let spanMascotaJugador = document.getElementById('mascota-jugador')
 let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
 let spanVidasJugador = document.getElementById('vidas-jugador')
 let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+let sectionMensajes = document.getElementById('resultado')
+let ataquesDelJugador = document.getElementById('ataques-del-jugador')
+let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3
@@ -112,17 +115,11 @@ function revisarVidas() {
 }
 
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById('resultado')
-    let ataquesDelJugador = document.getElementById('ataques-del-jugador')
-    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
-    
     let nuevoAtaqueDelJugador = document.createElement('p')
     let nuevoAtaqueDelEnemigo = document.createElement('p')
-
     sectionMensajes.innerHTML = resultado
     nuevoAtaqueDelJugador.innerHTML = ataqueJugador
     nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
-
     ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
     ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
