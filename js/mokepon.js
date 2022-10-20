@@ -10,6 +10,7 @@ let inputHipodoge = document.getElementById('hipodoge')
 let inputCapipepo = document.getElementById('capipepo')
 let inputRatigueya = document.getElementById('ratigueya')
 let spanMascotaJugador = document.getElementById('mascota-jugador')
+let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3
@@ -42,8 +43,6 @@ function seleccionarMascotaJugador() {
 
 function seleccionarMascotaEnemigo() {
     let mascotaAleatoria = aleatorio(1,3)
-    let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
-
     if (mascotaAleatoria == 1) {
         spanMascotaEnemigo.innerHTML = 'Hipodoge'
     } else if (mascotaAleatoria == 2) {
