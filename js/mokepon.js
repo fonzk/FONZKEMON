@@ -11,6 +11,8 @@ let inputCapipepo = document.getElementById('capipepo')
 let inputRatigueya = document.getElementById('ratigueya')
 let spanMascotaJugador = document.getElementById('mascota-jugador')
 let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
+let spanVidasJugador = document.getElementById('vidas-jugador')
+let spanVidasEnemigo = document.getElementById('vidas-enemigo')
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3
@@ -67,7 +69,6 @@ function ataqueTierra() {
 
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1,3)
-    
     if (ataqueAleatorio == 1) {
         ataqueEnemigo = 'FUEGO'
     } else if (ataqueAleatorio == 2) {
@@ -75,14 +76,10 @@ function ataqueAleatorioEnemigo() {
     } else {
         ataqueEnemigo = 'TIERRA'
     }
-
     combate()
 }
 
 function combate() {
-    let spanVidasJugador = document.getElementById('vidas-jugador')
-    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
-    
     if(ataqueEnemigo == ataqueJugador) {
         crearMensaje("EMPATE")
     } else if(ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
